@@ -1,0 +1,116 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "64d2a40cc29c39c4c2569b4a2068f3ed",
+    "packages": [
+        {
+            "name": "digitalstars/simple-api",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/digitalstars/simple-api.git",
+                "reference": "d755b60f0fd800bdfa29fba4897c8dbc4f4db1c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/digitalstars/simple-api/zipball/d755b60f0fd800bdfa29fba4897c8dbc4f4db1c1",
+                "reference": "d755b60f0fd800bdfa29fba4897c8dbc4f4db1c1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DigitalStars\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ZeRoX",
+                    "email": "as234zx15@yandex.ru"
+                },
+                {
+                    "name": "Runnin",
+                    "email": "mr.kirilll12@mail.ru"
+                }
+            ],
+            "description": "Библиотека для простого создания POST/GET API",
+            "support": {
+                "issues": "https://github.com/digitalstars/simple-api/issues",
+                "source": "https://github.com/digitalstars/simple-api/tree/v1.0.0"
+            },
+            "time": "2020-10-07T19:10:44+00:00"
+        },
+        {
+            "name": "krugozor/database",
+            "version": "v2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Vasiliy-Makogon/Database.git",
+                "reference": "a246a85ec7f4bc7640753cdef1dcd4070e256d51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Vasiliy-Makogon/Database/zipball/a246a85ec7f4bc7640753cdef1dcd4070e256d51",
+                "reference": "a246a85ec7f4bc7640753cdef1dcd4070e256d51",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Krugozor\\Database\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Vasiliy Makogon",
+                    "email": "makogon-vs@yandex.ru"
+                }
+            ],
+            "description": "Database — библиотека PHP классов для простой, удобной, быстрой и безопасной работы с базой данных MySql, использующая расширение PHP mysqli и имитацию подготовленных запросов. Database — is a PHP class library for easy, convenient, fast and safe work with the MySql database, using the PHP mysqli extension and simulating prepared statements.",
+            "homepage": "https://github.com/Vasiliy-Makogon/Database",
+            "keywords": [
+                "database",
+                "mysql",
+                "mysql class",
+                "mysql database class",
+                "mysql database php class",
+                "mysqli",
+                "placeholder",
+                "placeholders",
+                "prepare statement"
+            ],
+            "support": {
+                "issues": "https://github.com/Vasiliy-Makogon/Database/issues",
+                "source": "https://github.com/Vasiliy-Makogon/Database/tree/v2.0"
+            },
+            "time": "2021-03-06T19:40:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

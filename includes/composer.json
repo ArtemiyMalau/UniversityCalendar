@@ -1,0 +1,6 @@
+{
+    "require": {
+        "krugozor/database": "^2.0",
+        "digitalstars/simple-api": "^1.0"
+    }
+}
