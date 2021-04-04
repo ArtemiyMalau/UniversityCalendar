@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Магазин "Одежда"</title>
+	<title>Расписание на {{ date|date("F j", "Europe/Moscow") }}</title>
 	
 	<!-- Bootstrap styles -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -21,8 +21,8 @@
 	{{ include("header.tpl") }}
 
 	<div class="row site-block">
-		<div class="col-md-12">
-			<h3 class="h3 block-title">{{ date|date("F d", "Europe/Moscow") }}</h3>
+		<div class="col-12">
+			<h3 class="h3 block-title">{{ date|date("F j", "Europe/Moscow") }}</h3>
 			{% if schedules|length > 0 %}
 				<table class="table table-hover">
 					<thead>

@@ -2,8 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Магазин "Одежда"</title>
-
+	<title>Календарь экзаменов</title>
 
 	<!-- Bootstrap styles -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -33,13 +32,17 @@
 	{{ include("header.tpl") }}
 
 	<div class="row site-block">
-		<div class="col-md-12">
-			<div style="display: flex;">
+		<div class="col-12">
+			<div class="calendar_header">
 				<h3 class="h3 block-title">{{ month|date("F Y", "Europe/Moscow") }}</h3>
 				<div class="mr-auto"></div>
-				<div>
+				<div class="row">
+					<div class="col-auto">
 						<a href="calendar.php?year={{ prev_calendar.year }}&month={{ prev_calendar.month }}">Предыдущий месяц</a>
-						<a style="padding-left: 20px" href="calendar.php?year={{ next_calendar.year }}&month={{ next_calendar.month }}">Следующий месяц</a>
+					</div>
+					<div class="col-auto">
+						<a href="calendar.php?year={{ next_calendar.year }}&month={{ next_calendar.month }}">Следующий месяц</a>
+					</div>
 				</div>
 			</div>
 			<section class="calendar__days border-theme bg-color-theme" style="padding: 1.5rem">
@@ -81,21 +84,21 @@
 	</div>
 	<div class="row site-block end-block">
 		<a name="add_schedule"></a>
-			<div class="col-md-6">
-				<form id="add_schedule" method="POST" action="includes/api.php">
-					<h3 class="h3 block-title">Добавить занятие</h3>
-					<input class="form-control" name="module" type="text" value="add_schedule" hidden>
-					<label class="col-form-label">Дата и время экзамена</label>
-					<input type="text" class="form-control" id="schedule_datetime" name="date" required>
-					<label class="col-form-label">Название предмета</label>
-					<select class="form-control" name="id_subject" required>
-						{% for subject in subjects %}
-							<option value="{{ subject.id }}">{{ subject.title }}</option>
-						{% endfor %}
-					</select>
-					<button class="form-control button" style="background-color: #8adc55;" type="submit">Добавить</button>
-				</form>
-			</div>
+		<div class="col-lg-6 col-12">
+			<form id="add_schedule" method="POST" action="includes/api.php">
+				<h3 class="h3 block-title">Добавить занятие</h3>
+				<input class="form-control" name="module" type="text" value="add_schedule" hidden>
+				<label class="col-form-label">Дата и время экзамена</label>
+				<input type="text" class="form-control" id="schedule_datetime" name="date" required>
+				<label class="col-form-label">Название предмета</label>
+				<select class="form-control" name="id_subject" required>
+					{% for subject in subjects %}
+						<option value="{{ subject.id }}">{{ subject.title }}</option>
+					{% endfor %}
+				</select>
+				<button class="form-control button" style="background-color: #8adc55;" type="submit">Добавить</button>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
