@@ -46,20 +46,20 @@
 				</div>
 			</div>
 			<section class="calendar__days border-theme bg-color-theme" style="padding: 1.5rem">
-				<section class="calendar__top-bar">
-					<span class="top-bar__days">Mon</span>
-					<span class="top-bar__days">Tue</span>
-					<span class="top-bar__days">Wed</span>
-					<span class="top-bar__days">Thu</span>
-					<span class="top-bar__days">Fri</span>
-					<span class="top-bar__days">Sat</span>
-					<span class="top-bar__days">Sun</span>
-				</section>
+				<div class="row">
+					<span class="col d-none d-md-block top-bar__days">Mon</span>
+					<span class="col d-none d-md-block top-bar__days">Tue</span>
+					<span class="col d-none d-md-block top-bar__days">Wed</span>
+					<span class="col d-none d-md-block top-bar__days">Thu</span>
+					<span class="col d-none d-md-block top-bar__days">Fri</span>
+					<span class="col d-none d-md-block top-bar__days">Sat</span>
+					<span class="col d-none d-md-block top-bar__days">Sun</span>
+				</div>
 				{% for key, event in events %}
 					{% if key % 7 == 0 %}
-						<section class="calendar__week">
+						<div class="row" style="padding-top: 1rem">
 					{% endif %}
-						<div class="calendar__day
+						<div class="col-6 col-sm-3 col-md calendar__day
 						{% if event.today is defined %}
 							today
 						{% elseif event.event_counts %}
@@ -76,7 +76,7 @@
 							{% endif %}
 						</div>
 					{% if key % 7 == 6 %}
-						</section>
+						</div>
 					{% endif %}
 				{% endfor %}
 			</section>

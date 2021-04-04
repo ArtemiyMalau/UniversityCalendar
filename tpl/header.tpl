@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-color-theme border-theme">
+<nav class="navbar navbar-expand-sm navbar-light bg-color-theme border-theme">
 
 	<a class="navbar-brand" href="http://localhost//Labs/UniversityCalendar/calendar.php">Расписание</a>	
 
