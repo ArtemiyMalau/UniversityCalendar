@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/functions.php";
+
 const MONDAY = 1;
 const SUNDAY = 7;
 
@@ -81,5 +83,36 @@ class Calendar {
 	    } else {
 	        return false;
 	    }
+	}
+
+	public function get_calendar_page($format_calendar_day="j") {
+		// Get days format for each calendar day
+		$format_datatime_arr = get_format_datetime_array(
+		    new DateTime($this->calendar_start->format("d-m-Y")), 
+		    $this->calendar_days, 
+		    $format_calendar_day
+		);
+
+		// Create calendar schedules array
+		$now = new DateTime("now", $this->timezone);
+		$calendar_page = [];
+		foreach ($format_datatime_arr as $index => $format_datatime) {
+		    $month_day = [];
+
+		    // Check if current day is day of needed month
+		    $month_day["is_current_month"] = $this->is_month_day($index);
+
+		    $schedule_dt = DateTime::createFromFormat("U", $format_datatime["timestamp"]);
+		    if ($now->diff($schedule_dt)->format("%R%a") === "-0") {
+		        $month_day["today"] = true;
+		    }
+
+		    $month_day["format"] = $format_datatime["format"];
+		    $month_day["timestamp"] = $format_datatime["timestamp"];
+
+		    $calendar_page[] = $month_day;
+		}
+
+		return $calendar_page;
 	}
 }

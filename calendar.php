@@ -19,33 +19,6 @@ if (isset($_GET["year"], $_GET["month"])) {
 
 [$calendar_start, $calendar_end] = $calendar->get_month_boundaries();
 
-// Get days format for each calendar day
-$format_datatime_arr = get_format_datetime_array(
-    new DateTime($calendar_start->format("d-m-Y")), 
-    $calendar->get_calendar_days(), 
-    "j"
-);
-
-// Create calendar schedules array
-$now = new DateTime();
-$calendar_events = [];
-foreach ($format_datatime_arr as $index => $format_datatime) {
-    $month_day = [];
-
-    // Check if current day is day of needed month
-    $month_day["is_current_month"] = $calendar->is_month_day($index);
-
-    $schedule_dt = DateTime::createFromFormat("U", $format_datatime["timestamp"]);
-    if ($now->diff($schedule_dt)->format("%R%a") === "-0") {
-        $month_day["today"] = true;
-    }
-
-    $month_day["format"] = $format_datatime["format"];
-    $month_day["timestamp"] = $format_datatime["timestamp"];
-
-    $calendar_events[] = $month_day;
-}
-
 // Getting event count for each day of calendar interval
 $ch = curl_init();
 $query = http_build_query([
@@ -58,6 +31,8 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 $interval_schedules = json_decode(curl_exec($ch), JSON_OPTIONS)["interval_schedules"];
+
+$calendar_events = $calendar->get_calendar_page();
 
 foreach ($interval_schedules as $schedule) {
     $schedule_dt = DateTime::createFromFormat("U", $schedule["timestamp"]);
