@@ -75,5 +75,6 @@ echo $twig->render("calendar.tpl", [
     "events" => $calendar_events,
     "next_calendar" => $paginator["next"],
     "prev_calendar" => $paginator["prev"],
-    "month" => $calendar->get_month()
+    "month" => $calendar->get_month(),
+    "subjects" => $db->query("SELECT * FROM subjects")->fetchAssocArray()
 ]);
