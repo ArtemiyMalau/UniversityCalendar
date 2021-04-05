@@ -7,7 +7,6 @@ Simple implementation of calendar with university exams schedule payload
 Open [calendar.php script](calendar.php) to get calendar page of current month. <br/>
 Or pass ***year*** and ***month*** get parameter into url for get calendar page of certain month.
 
-
 Open [day.php script](day.php) for getting list of exams for current day. <br/>
 [day.php](day.php) receiving ***date*** get parameter which describe certain day in unix_timestamp format.
 
@@ -38,7 +37,7 @@ $calendar_days = $calendar->get_calendar_page();
 ## API methods
 
 Route all API-query to [api.php script](includes/api.php) passing ***module*** get parameter to specify type of called method.
-
+</br>
 
 ### `get_day_schedules`
 
@@ -78,6 +77,7 @@ Getting a list of exam schedules and specialities taking these exams for current
   ]
 }
 ```
+</br>
 
 ### `get_interval_schedules`
 
@@ -107,7 +107,7 @@ Getting day list on which exams are scheduled, including count of scheduled exam
   ]
 }
 ```
-
+</br>
 
 ### `add_schedule`
 
