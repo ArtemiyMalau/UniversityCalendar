@@ -31,6 +31,12 @@ button {
   }
 }
 
+@media (max-width: 767px) {
+  .form-control {
+    height: 55px;
+  }
+}
+
 /* Calendar style */
 * {
   outline: none;
@@ -47,40 +53,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar__days {
   width: 100%;
-  padding: 0 5px;
+  padding: 0 1.2rem;
   color: #2d4338;
   font-weight: 100;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 1rem;
 }
 
-.calendar__days {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column wrap;
-  -webkit-box-align: stretch;
-          align-items: stretch;
-  width: 100%;
-  float: none;
-  min-height: 600px;
-  /*height: 100%;*/
-  font-size: 12px;
-  padding: 0.8rem 0rem 1rem 0rem;
-  background: #f5f7f6;
-}
-
 .calendar__day {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-flow: column wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 1.9rem 0.2rem 0.2rem;
+  padding: 1.9rem 1.2rem 0.2rem;
 }
 
 .calendar__date {
