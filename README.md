@@ -36,10 +36,11 @@ $calendar_days = $calendar->get_calendar_page();
 
 ## API methods
 
-Route all API queries to [includes/api.php](includes/api.php) endpoint passing ***module*** get parameter to specify type of called method.
+Route all API queries to [api.php script](includes/api.php) passing ***module*** get parameter to specify type of called method.
 </br>
 
 ### `get_day_schedules`
+`site.ru/includes/api.php?module=get_day_schedules`
 
 Getting a list of exam schedules and specialities taking these exams for current day.
 
@@ -80,6 +81,7 @@ Getting a list of exam schedules and specialities taking these exams for current
 </br>
 
 ### `get_interval_schedules`
+`site.ru/includes/api.php?module=get_interval_schedules`
 
 Getting day list on which exams are scheduled, including count of scheduled exams in date range.
 
@@ -110,6 +112,7 @@ Getting day list on which exams are scheduled, including count of scheduled exam
 </br>
 
 ### `add_schedule`
+`site.ru/includes/api.php?module=add_schedule`
 
 Add new exam's schedule of existing subject
 
