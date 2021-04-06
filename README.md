@@ -40,7 +40,7 @@ Route all API queries to [api.php script](includes/api.php) passing ***module***
 </br>
 
 ### `get_day_schedules`
-`vzlet-1.ru/UniversityCalendar/includes/api.php?module=get_day_schedules`
+http://vzlet-1.ru/UniversityCalendar/includes/api.php?module=get_day_schedules&date=1617507175
 
 Getting a list of exam schedules and specialities taking these exams for current day.
 
@@ -81,7 +81,7 @@ Getting a list of exam schedules and specialities taking these exams for current
 </br>
 
 ### `get_interval_schedules`
-`vzlet-1.ru/UniversityCalendar/includes/api.php?module=get_interval_schedules`
+http://vzlet-1.ru/UniversityCalendar/includes/api.php?module=get_interval_schedules&start_date=1615001575&end_date=1620617575
 
 Getting day list on which exams are scheduled, including count of scheduled exams in date range.
 
@@ -112,7 +112,7 @@ Getting day list on which exams are scheduled, including count of scheduled exam
 </br>
 
 ### `add_schedule`
-`vzlet-1.ru/UniversityCalendar/includes/api.php?module=add_schedule`
+http://vzlet-1.ru/UniversityCalendar/includes/api.php?module=add_schedule&id_subject=1&date=1617690775
 
 Add new exam's schedule of existing subject
 
