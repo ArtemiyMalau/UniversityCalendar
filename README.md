@@ -36,7 +36,7 @@ $calendar_days = $calendar->get_calendar_page();
 
 ## API methods
 
-Route all API-query to [api.php script](includes/api.php) passing ***module*** get parameter to specify type of called method.
+Route all API queries to [includes/api.php](includes/api.php) endpoint passing ***module*** get parameter to specify type of called method.
 </br>
 
 ### `get_day_schedules`
